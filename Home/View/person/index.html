@@ -1,0 +1,35 @@
+<?php $this->header(); ?>
+
+	<div id="section5">
+		<div class="section_content">
+			<div class="left">
+				<div class="left_top">
+					<!-- <?php $data = $_SESSION['home']['icon']?> -->
+					<div class="left_img">
+	<!-- <?= var_dump($xx);  ?> -->
+	<img src="<?= empty($xx['icon'])?'../Public/default.gif':imgUrl($xx['icon'])?>" alt="" style="border-radius: 100%;width: 110px;height: 110px;">
+
+					</div>
+					<div class="left_title">
+						<p><?= $_SESSION['home']['tel']?></p>
+					</div>
+				</div>
+				<div class="left_middle">
+					<ul>
+						<li><a href="index.php?c=person&m=personMsg" target="show">个人信息</a></li>
+						<li><a href="index.php?c=person&m=personPwd" target="show">修改密码</a></li>
+						<li><a href="index.php?c=person&m=shopOrder" target="show">全部订单</a></li>
+						<li><a href="index.php?c=person&m=shopOrder1" target="show">待付款</a></li>
+						<li><a href="index.php?c=person&m=shopOrder2" target="show">待收货</a></li>
+						<li><a href="index.php?c=person&m=shopOrder3" target="show">待发货</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="right">
+			<iframe src="index.php?c=person&m=personMsg" frameborder='0' name="show" width="980px" height="600px" scrolling="auto">
+			</iframe>
+
+			</div>
+		</div>
+	</div>
+<?php $this->footer();?>

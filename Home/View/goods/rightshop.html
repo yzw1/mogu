@@ -1,0 +1,113 @@
+<?php  $this->header(); ?>
+	<!-- 中间内容 -->
+	<div id="section2"> 
+		<div class="section2_content">
+			<div class="section_total">
+			<h2 class="size">选择收货地址</h2>
+				<div class="section_address">
+				<form method="post" action="index.php?c=order" >
+					<table>
+						<tr>
+							<td>收件人:</td>
+							<td><input style="width: 240px;height: 32px;" type=" text" name="receiver" placeholder="收件人" ></td>
+	 					</tr>
+						<!-- <tr>
+							<td>邮编:ddddddd</td> 
+						</tr> -->
+						<tr>
+							<td>地址:</td>
+							<td>
+							<!-- <input style="width: 240px;height: 32px;" type="text" name="address" placeholder="地址" > -->
+							<select name="address" id="">
+								<option value="东北" selected>东北</option>
+								<option value="河北">河北</option>
+							</select>
+							</td>
+						</tr>
+						<tr>
+							<td>电话:</td>
+							<td><input style="width: 240px;height: 32px;" type="text" name="phone" placeholder="电话" maxlength="11"></td>
+						</tr>
+						<!--  -->
+					</table>
+					<!-- </form> -->
+				<ul><!-- 
+					<li><a href=""> 管理收货地址</a></li>
+					<li><a href=""> 使用新地址</a></li>
+ -->				</ul>
+				</div>
+			<h2 class="size">确认商品信息</h2>
+				<!-- <form action=""> -->
+					<table>
+						<tr>
+							<th class="r1">商品</th>
+							<th class="r2">单价(元)</th>
+							<th class="r3">数量</th>
+							<th class="r4">小计(元)</th>
+						</tr>
+						<tr class="null">
+							<td class="r1"></td>
+							<td class="r2"></td>
+							<td class="r3"></td>
+							<td class="r4"></td>
+
+						</tr>
+						<?php foreach ($_SESSION['order'] as $k => $v): ?>
+							
+						
+						<tr class="color">
+							<td class="c1">
+								<img src="<?= imgUrl($v['icon']) ?>" alt="" width="80px" height="80px">
+								<a href="">
+									<p>产品:<?=$v['name']?>&nbsp;&nbsp;&nbsp;&nbsp;描述:<?=$v['desc'] ?></p>
+								</a>
+							<!-- 	订单信息:
+							 <input style="border: 0px;width: 300px;" type="text" name="orderNum" readonly value="<?= create_uuid() ?>"> -->
+							</td>
+							<td class="c2"><?= $v['price'] ?></td>
+							<td class="c3"><?= $v['count'] ?></td>
+							<?php
+							$sum = $v['price'] * $v['count'];
+							$total += $sum;	
+							$count += $v['count'];
+
+							?>
+							<td class="c4"><?= $sum ?></td>
+					
+						</tr>
+						<?php endforeach ?>
+
+						<tr class="color">
+							<td class="r1"></td>
+							<td class="r2"></td>
+							<td class="r3"></td>
+							<td class="r4">合计：
+							<span style="color: #ff5777;font: 17px bold"><?= $total ?></span>
+							</td>
+						</tr>
+					</table> 
+				<!-- </form> -->
+
+			</div>
+			<div class="section_footer">
+				<div class="left">
+					<!-- <i class="left_total"> </i> -->
+					<a href="index.php?c=order&m=showCar" class="left_1">返回购物车</a>
+				</div>
+				<div class="right">
+				<!-- <a href="index.php?c=goods&m=shopwin">
+					去支付
+					</a> -->
+					<input type="submit" value="去支付">
+				</div>
+				<?php $totall+=$total ?>
+				<div class="middle">
+					￥<input type="text" class="input" readonly name="totall" value="<?= $totall ?>" style="width: 50px;border: 0;height: 40px;font: 26px;">
+				</div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+	<!-- 购买的地方 -->
+	<!-- <div id="section_b">	<p style="margin:50px auto;text-align: center;">蘑菇街|<a href="">加入开放平台</a>&copy;2017 Mogujie.com,All Rights Reserved</p></div>
+ -->

@@ -1,0 +1,30 @@
+<?php $this->css();?>
+
+<div id="section4">
+		<div class="section_middle">
+			<form action="index.php?c=person&m=doPersonPwd" method="post" enctype="multipart/data-form">
+				<table>
+					
+					<tr>
+						<th>旧密码:</th>
+						<th><input class="input" type="password" name="pwd"></th>
+					</tr>
+					<tr>
+						<th>新密码:</th>
+						<th><input class="input" type="password" name="repwd"></th>
+					</tr>
+					<tr>
+						<th>确认密码:</th>
+						<th><input class="input" type="password" name="reepwd"></th>
+					</tr>
+					<tr>
+						<th></th>
+						<th><input class="submit" type="submit" value="提交"></th>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+
+<?php $this->css_end();?>

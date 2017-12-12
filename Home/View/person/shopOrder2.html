@@ -1,0 +1,107 @@
+<?php $this->css(); ?>
+
+<div id="section4">
+		<h2>待收货订单</h2>
+			  <?php $id= $v['id']; ?>
+                <?php  $amount=$v['amount'];?>
+                <?php  $status=$v['status'];?>
+                <?php $isPay = $v['isPay']?>
+                <?php $cancel = $v['cancel']?>
+                
+
+		<table border="1">
+			<tr>
+				<th style="width: 100PX;">商品信息</th>
+				<th style="width: 100PX;">实付款</th>
+				<th>订单状态</th>
+				<th>操作</th>
+			</tr> 
+			
+			<!-- 2 -->
+			<?php foreach ($order as $k => $v): ?>
+                <?php $id= $v['id']; ?>
+                <?php  $amount=$v['amount'];?>
+                <?php  $status=$v['status'];?>
+                <?php $isPay = $v['isPay']?>
+                <?php $cancel = $v['cancel']?>
+                <?php if ($isPay == 1 && $status == 2): ?>
+                        	
+			<tr>
+                	
+                <td>
+                    <span><?= date('Y-m-d H:i:s ',$v['time'])?></span>
+                    <span>
+                        订单编号:
+                        <a href="#"><?= $v['orderNum']?></a>
+
+                    </span>
+                    
+                    <!-- <span class="tcol3 hl_blue"></span> -->
+                </td>
+                <td class="sep-col"></td>
+                <td class="sep-col"></td>
+                <td class="sep-col"></td>
+            </tr>
+			
+			<tr>
+				
+				<td class="udfore udfore1">
+                        <!-- 商品 -->
+					<table>
+						<tr>
+							<td>图片</td>
+							<td>单价</td>
+							<td>数量</td>
+						</tr>
+						<?php foreach ($goods[$id] as $k => $v): ?>
+							
+							
+						<tr>
+							<td class="usergoods usergoods1"><img src="<?= imgurl($v['icon'])?>" alt="" style="width: 80px;height: 80px;"></td>
+							<td class="usergoods usergoods2"><?= $v['price']?></td>
+							<td class="usergoods usergoods3"> <?= $v['count']?></td>
+						</tr>
+						 <?php endforeach ?>
+				
+					</table>
+				</td>
+				<td class="udfore udfore2"><?= $amount?></td>
+			
+					
+				<td class="udfore udfore3">
+				<?php
+                switch ($status)
+                {
+
+                	case '1':echo '待发货<br>';break;
+                	case '2':echo '待收货<br>';break;
+                	case '3':echo '已收货<br>';break;
+                	case '4':echo '待付款<br>';break;         		
+                }
+
+
+                   ?>
+                            	
+                            </td>
+				
+				<?php if ($status == 1): ?>
+					<td><a href="index.php?c=order&m=status&id=<?= $id?>&status=<?=$status?>">确认收货</a>	
+				
+				<?php elseif($status == 3):?>
+							<td class="udfore udfore4">暂无评价
+				<?php elseif($status == 2) :?>
+						<td><a href="index.php?c=order&m=status&id=<?= $id?>&status=<?=$status?>">确认收货</a>	
+				<?php endif ?>
+				</td>
+			</tr>
+                <?php endif ?>
+          <?php endforeach ?>
+          <?php if(empty($order)):?>
+	        	<strong style="color: red;font-size: 26px">没有可支付的订单</strong>
+          <?php endif ?>
+
+		</table>
+               
+          
+	</div>
+<?php $this->css_end();?>

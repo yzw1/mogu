@@ -1,0 +1,157 @@
+.clear::before,.clear::after{
+	content: '';
+	display: table;
+}
+.clear::after{
+	clear: both;
+} 
+#shop{
+	height: 650px;
+	background-color: #fff;
+}
+#shop .shop_content{
+	width: 1200px;height: 650px;margin:0 auto;
+}
+#shop .shop_content .shop_left ul{
+    display: block;
+    width: 400px;height: 100px;float: left;
+    /* background-color: pink; */
+    margin-top: 10px;
+}#shop .shop_content .shop_left ul li{float: left;margin-left: 10px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+#shop .shop_content .shop_right .shop_add{
+    width: 97px;height: 27px;
+    background-color: pink;
+    margin: 0 auto 4px;position: relative;
+    margin-left: 75px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+}
+#shop .shop_content .shop_right .shop_add span{
+    width: 30px;height: 30px;background-color: red
+}
+#shop .shop_content .shop_right .num{
+    position: absolute;
+    border: 0;
+    width: 43px;
+    height: 12px;
+    line-height: 12px;
+    padding: 6px 0 7px;
+    border: 1px solid #ddd;
+    background: #fff;
+    top: 0;
+    left: 26px;
+    text-align: center;
+    color: #333;
+}
+#shop .shop_add .sub{
+        left: 0;
+    background: url('../img/xiaoshop.png') 0 -180px no-repeat;
+    background-color: blue;
+    cursor: pointer;
+}
+#shop .shop_add .add{
+        right: 0;
+    background: url('../img/xiaoshop.png') 0 -140px no-repeat;
+    cursor: pointer;
+}
+
+#shop .shop_content .shop_right .shop_add .shop_goods_add{
+    font-family: Microsoft YaHei,arial;
+    color: #333;
+    /* width: 100%; */
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 30px;
+    /* line-height: 100px; */
+    margin-left: -70px;
+}
+#shop .shop_content .shop_right .shop_add span{
+    position: absolute;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#shop .shop_left{
+	float: left;width: 400px;height: 600px;float: left;
+}
+#shop .shop_right{
+	float: left;width: 550px;height: 600px;float: right;
+	margin-right: 190px;
+}
+#shop .shop_desc{
+	height: 100px;
+	border: 1px solid #ccc;
+}
+#shop .shop_desc .shop_goods_title{
+	  font-family: Microsoft YaHei,arial;
+    color: #333;
+    /* width: 100%; */
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 100px;
+}
+#shop .shop_pric{border: 1px solid #ccc; height: 100px;margin-top: 0px; }
+#shop .shop_pric1{border: 1px solid #ccc; height: 100px;margin-top: 0px;position: relative; }
+#shop .shop_pric1 em{ width: 20px;height: 20px;border: 1px solid #ccc; display: block;}
+#shop .shop_pric1 em:hover{cursor: pointer;}
+#shop .shop_pric1 .br{float: left;}
+#shop .shop_pric1 .bl{float: right;}
+
+#shop .shop_pric1 .shop_goods_pric{font-family: Microsoft YaHei,arial; color: #333; /* width: 100%; */ margin-bottom: 15px; font-size: 30px; line-height: 100px; }
+#shop .shop_pric .shop_goods_pric{font-family: Microsoft YaHei,arial; color: #333; /* width: 100%; */ margin-bottom: 15px; font-size: 30px; line-height: 100px; }
+#shop .shop_action{height: 100px;margin-top: 100px;}
+#shop .shop_pric2{width: 80px;height: 20px;position: absolute;bottom: 35px;left: 100px;}
+#shop .stock{width: 100px;height: 20px;position: absolute;bottom: 35px;left: 200px;}
+/* 付款 */
+#shop .shop_action .shop_action_buy{
+width: 200px;
+    background: #ef2f23;
+    height: 50px;
+	margin-left: 50px;
+	border: 1px solid #ccc;
+
+}
+#shop .shop_action .shop_action_add{
+width: 200px;
+    background: #fff;
+    height: 50px;
+	margin-left: 50px;
+	border: 1px solid #ccc;
+    cursor: pointer;
+
+}
+#shop .shop_action .shop_action_add:hover{
+    cursor: pointer;
+}
+
+#shop .shop_action .buy_btn {
+    display: inline-block;
+    text-align: center;
+    font: 20px Microsoft YaHei;
+    color: #fff;
+    line-height: 50px;
+}
+#shop .shop_action .add_btn {
+    display: inline-block;
+    text-align: center;
+    font: 20px Microsoft YaHei;
+    color: #000;
+    line-height: 50px;
+}

@@ -1,0 +1,35 @@
+
+#section2{height: 700px; margin-top: -30px; }
+#section_b{height: 300px;position: relative;}
+#section_b p{display: block;position: absolute;bottom: 0px;width:1300px;margin:0 auto;}
+#section2 .section2_content{width: 1200px;min-height: 700px; margin: 0 auto; background-color: white; }
+#section2 .section_total{width: 1130px;min-height: 642px; margin: 0 auto; /* background-color: white; */ margin-bottom: 5px; }
+#section2 h2{height: 46px;display: block; border-bottom: 1px solid #ccc; margin-top: 65px; }
+#section2 .section_address{width: 340px;height: 160px; /* background-color: red; */ }
+#section2 .section_address td{width: 340px;height: 32px; border-bottom:  1px solid #ccc; } 
+#section2 .section_address ul li{float: left;display: block; margin-top: 20px; margin-left: 15px; }
+#section2 .section_total tr{border-bottom: 1px solid #ccc; }
+
+#section2 .section_total .r1{width: 800px;height: 50px; text-align: center; }
+#section2 .section_total .r2{width: 140px;height: 50px; text-align: center;}
+#section2 .section_total .r3{width: 120px;height: 50px; text-align: center;}
+#section2 .section_total .r4{width: 140px;height: 50px; text-align: center; }
+#section2 .section_total .c1{width: 800px;height: 110px; /* text-align: center; */ }
+#section2 .section_total .c2{width: 140px;height: 110px; text-align: center;}
+#section2 .section_total .c3{width: 120px;height: 110px; text-align: center;}
+#section2 .section_total .c4{width: 140px;height: 110px; text-align: center;}
+#section2 .section_total .color{background-color: #efefef; }
+#section2 .section_total .color img{margin-left: 20px; }
+#section2 .section_total .color a{width: 560px;height: 80px;display: block; vertical-align: middle; margin: -83px 20px 0px 115px; line-height: 20px; font-size: 14px; }
+#section2 .section_footer{width: 1200px;height: 50px; /* background-color: pink; */ margin: 0 auto; border: 1px solid #ccc; } 
+#section2 .section_footer .left{width: 100px;height:50px;float:left;margin-left:25px;}
+#section2 .section_footer .left .left_1{width: 65px; /* background-color: white; */ display: block;float: left;margin-top: 13px; }
+#section2 .section_footer .right{width: 172px;height: 51px; background-color: #FF4163; float: right; }
+#section2 .section_footer .right input{font-size: 26px ;font-weight: bold;color:#fff;line-height: 51px;padding-left:10px;background-color: #ff5777;border: 0;width: 172px;}
+#section2 .section_footer .right input:hover{cursor: pointer;}
+
+#section2 .section_footer .middle{width: 100px;height: 50px; /* background-color: blue; */ margin: 0 auto;color: #ff5777; font-weight: 700;font-size: 26px;font-family: Microsoft YaHei,sans-serif; margin-left: 900px;position: relative; }
+#section2 .section_footer .middle .input{
+width: 50px;right: 1px;top: 1px;
+}
+#section2 .section_footer .left_total{margin: 15px 0px;float: left;width: 35px;height: 25px; background-color: red; /* background: url('../img/xiaoshop.png') -323px -6px no-repeat; */ }

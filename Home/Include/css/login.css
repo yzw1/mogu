@@ -1,0 +1,70 @@
+#header{
+	height: 97px;background-color: white;width: 100%;
+}
+#header .header_content{width: 1200px;height: 97px;margin:0  auto;position: relative;}
+#header .logo{
+	width: 220px;height: 55px;background: url('../images/total.png') no-repeat;display: inline-block;
+}
+#header a{
+	display: block;margin-top: 15px;
+}
+#header .tell{    position: absolute;
+    top: 35px;
+    display: inline-block;
+    height: 28px;
+    width: 861px;
+    margin-left: 20px;
+    background-color: #ffefef;
+    border: 1px solid #ffc0cc;
+    text-align: center;
+    line-height: 28px;
+    font-size: 11px;
+    color: #666;}
+/* section中间部分 */
+#section{
+	height: 600px;
+	background: url('../images/login.png') -280px 0px no-repeat;
+	margin-bottom:30px ;
+	position: relative;
+}
+#section .section_login{width: 400px;height: 348px;background-color: #ffeceb;position: absolute;top: 70px;right: 110px;
+	opacity: .9;
+}
+#section .section_login .section_login_top{
+	width: 394px;height: 70px;
+}
+#section .section_login_top .section_fl{
+	width: 197px;height: 53px;float: left;
+	border-bottom: 1px solid #333;position: relative;
+}
+#section .section_login_top .section_fr{
+	border-bottom: 1px solid #333;
+	width: 197px;height: 53px;float: right;margin-left: 0px;position: relative;
+}
+#section .section_login_top a{display: block;text-align: center;width: 119px;height: 43px;bottom: 0px;left: 30px;position: absolute;border-bottom: 2px solid #f07;}
+#section .section_login_top .section_fr a{border-bottom: 0;}
+#section .section_form{width: 356px;height: 248px;
+margin-left: 44px;}
+/* 表单部分 */
+#section .section_user{
+	width: 314px;height: 42px;
+}
+#section .section_pad{width: 314px;height: 42px; margin-top: 65px; } 
+#section .section_check{width: 314px;height: 20px; margin-top: 30px; }
+ #section .section_check input{width: 0px;height: 20px; margin-left: -130px; } 
+  #section .section_check span{display:block;margin-left: 50px; margin-top: -30px;} 
+/* #section .section_pad .input */
+#section .section_sub{
+	width: 314px;height: 42px;
+	margin-top: 30px;background-color: #f07;
+}
+#section .section_los{
+	width: 70px;height: 40px;
+	margin-top: 30px;margin-left: 250px;
+}
+#section .section_register{
+	width: 70px;height: 40px;
+	margin-top: 30px;margin-left: 20px;
+}
+#section .section_form input{width: 314px;height: 42px;background-color: transparent;outline: none;border: 1px solid #333;}
+#section .section_form .pointer:hover{cursor: pointer;}

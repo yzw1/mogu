@@ -1,0 +1,30 @@
+<?php $this->header(); ?>
+<div id='main'>
+		<div class='buy_wrap'>
+				<div class='buy_title'>
+					<div class='content'>尊敬的用户，请确认您购买的商品！</div>
+				</div>
+				<div class='buy_detail'>
+				<!-- <form action="index.php?c=order&m=payTrue"> -->
+					<div class='content'>
+						
+						<p>你的订单号: <?= $data['orderNum'] ?></p>
+					
+						<p>我们会尽快为您发货，保证神机手机以最快的速度向您奔去。</p>
+						<p>若您有任何疑问，请随时拨打本公司服务专线：400-9655-512（早9：00至晚18：00）或微信关注神机手机，咨询客服人员。</p>
+						<p>发票说明：此订单发票由天朝公司（货款）xx公司（运输仓储费）共同开具</p>
+						<a href="index.php?c=order&m=payTrue"><input type="submit" value="确认支付"></a>
+					</div>
+				<!-- </form> -->
+				</div>
+			
+			<!-- <div class='QRc'>
+					<div class='item'>
+						<p>敬请关注官方微信</p>
+						<p>随时掌握官方的优惠信息和回馈活动</p>
+					</div>
+			</div> -->
+		</div>
+	</div>
+
+<?php $this->footer(); ?>

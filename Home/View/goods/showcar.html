@@ -1,0 +1,83 @@
+<?php $this->header(); ?>
+<div id="section1">
+
+        
+		<div class="section1_content">
+        <?php if (!empty($_SESSION['shop'])): ?>
+        	<form action="index.php?c=order&m=rightshop" method="post">
+				<table>
+					<tr>
+						<th class="c1">品牌</th>
+						<th class="c2" style="width: 600px" >产品</th>
+						<th class="c3">商品库存</th>
+						<th class="c4">单价(元)</th>
+						<th class="c5">数量</th>
+						<th class="c6">小计(元)</th>
+						<th class="c7">操作</th>
+					</tr>
+						
+					<!-- <tr style="height: 50px;"></tr> -->
+					<?php foreach ($_SESSION['shop'] as $k => $v): ?>
+					<tr style="border: 1px solid #ccc">
+						<td class="r1"></td>
+						<td class="r2" width="600px">
+							<img src="<?= imgUrl($v['icon'])?>" alt="" width="80px" height="80px">
+							<a href="#"><p><?= $v['name']?>:&nbsp;&nbsp;产品描述:<?= $v['desc'] ?></p></a>
+						</td> 
+						<td class="r3">库存<?= $v['stock']?>件</td>
+						<td class="r4">
+							<p class="price" >￥<?= $v['price'] ?></p>
+						</td>
+						<td class="r5">
+							<div class="shop_add">
+								<span class="sub"><a href="index.php?c=goods&m=sub&id=<?= $k ?>">-</a></span>
+								<input type="text" disabled name="count" value="<?=  $v['count'] ?>" class="num">
+								<span class="add"><a href="index.php?c=goods&m=add&id=<?= $k ?>">+</a></span>
+							</div>
+						</td>
+						<?php
+					// 小计: 
+					$sum = $v['price'] * $v['count'];
+									// 总价:
+										$total += $sum;
+										// $c = key($_SESSION['shop'])
+					?>
+						<td class="r6">
+							<p class="price" style="color:red">￥<?= $sum ?></p>
+						</td>
+						<td class="r7">
+							<a href="index.php?c=goods&m=doDel&id=<?=$k ?>" class="del">删除</a>
+						</td>
+					</tr>
+					<?php endforeach ?>
+					
+
+				</table>
+		</div>
+		<div class="section1_footer">
+			<div class="left">
+				<input type="hidden" class="left_total">
+				<a href="" class="left_1"></a>
+				<a href="" class="left_1"></a>
+			</div>
+			<div class="right">
+				<!-- <a href="&id=<?= $c ?>">去购买</a> -->
+				<input type="submit" value="去购买">
+			</div>
+			<div class="middle">
+				￥<?=$total?>
+			</div>
+		</div>
+		</form>
+        <?php endif ?>
+        <?php if (empty($_SESSION['shop'])): ?>
+        	
+		<div class="shopnull">
+			<div class="shopnull_image">
+				<img src="<?= AI ?>shopcar.jpg" alt="" style="width: 300px;height: 200px;">
+			</div>
+			<a href="index.php">购物车空空如也,快去购物吧</a>
+		</div>
+        <?php endif ?>
+	</div>
+<?php  $this->footer();?>

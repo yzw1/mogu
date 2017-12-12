@@ -1,0 +1,43 @@
+<?php $this->css(); ?>
+	<div id="header">
+		<div class="header_content">
+		<a href="index.php" class="logo"></a>
+		<span class="tell">依《网络安全法》相关要求，即日起蘑菇街会员登陆需绑定手机。为保障您的账户安全及正常使用，如您尚未绑定，请尽快完成绑定，感谢您的理解和支持!</span>
+		</div>
+	</div>
+	<div id="section">
+		<div class="section_login">
+			<div class="section_login_top">
+				<div class="section_fl">
+					<a href="#"><h2>普通登录</h2></a>
+				</div>
+				<!-- <div class="section_fr">
+					<a href="loginPhone.html"><h2>手机登录</h2></a>
+				</div>
+ -->			</div>
+			<form action="index.php?c=login&m=doLogin" method="post">
+			<div class="section_form">
+				<div class="section_user">
+					<input type="text" name="tel" placeholder="手机号" maxlength="11">
+				</div>
+				<div class="section_pad">
+					<input type="password" name="pwd" placeholder="密码" maxlength="9">
+				</div>
+				<!-- <div class="section_check">
+					<input type="checkbox" name="save" value="2"> <span>请记住我</span>
+				</div> -->
+				<!-- <div class="section_pad">
+					<input type="checkbox" name="" placeholder="密码">
+				</div> -->
+				<div class="section_sub">
+					<input type="submit" name="" value="登录" class="pointer">
+				</div>
+				<div class="section_register">
+					<a href="index.php?c=login&m=register">请注册</a>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+
+<?php $this->footer(); ?>

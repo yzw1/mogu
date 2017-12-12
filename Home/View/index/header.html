@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>蘑菇街-我的买手街</title>
+	<link rel="icon" href="<?= AI ?>mogu.ico">
+	<link rel="stylesheet" href="<?= AC ?>buyShop.css">
+	<link rel="stylesheet" href="<?= AC ?>footer.css">
+	<link rel="stylesheet" href="<?= AC ?>header.css">
+	<link rel="stylesheet" href="<?= AC ?>index.css">
+	<link rel="stylesheet" href="<?= AC ?>login.css">
+	<link rel="stylesheet" href="<?= AC ?>loginPhone.css">
+	<link rel="stylesheet" href="<?= AC ?>person.css">
+	<link rel="stylesheet" href="<?= AC ?>personMsg.css">
+	<link rel="stylesheet" href="<?= AC ?>register.css">
+	<link rel="stylesheet" href="<?= AC ?>rightShop.css">
+	<link rel="stylesheet" href="<?= AC ?>shopDesc.css">
+	<link rel="stylesheet" href="<?= AC ?>shopWin.css">
+	<link rel="stylesheet" href="<?= AC ?>showShop.css">
+	<link rel="stylesheet" href="<?= AC ?>total.css">
+</head>
+<body>
+<!-- 头部 -->
+	<div id="headerheader">
+		<div class="wrap">
+		<i class="home"></i>
+			<a href="index.php">蘑菇街首页</a>
+
+			<ul>
+			<?php if (!empty($_SESSION['home']['tel'])): ?>
+				
+				<li class="user"><a href="#"><?= $_SESSION['home']['tel']?></a>
+				<span>&nbsp;|</span>
+					<div class="msg">
+						<ul>
+							<li>&nbsp;<a href="index.php?c=person">个人设置</a></li>
+							<li>&nbsp;<a href="index.php?c=login&m=doLogout">退出</a></li>
+						</ul>
+					</div>
+				</li>
+			<?php endif ?>
+			<?php if (empty($_SESSION['home']['tel'])): ?>
+
+				<li><a href="index.php?c=login">登录</a>
+				<span>&nbsp;|</span>
+				</li>
+				<li><a href="index.php?c=login&m=register">注册</a>
+				<span>&nbsp;|&nbsp;</span>
+				</li>
+			<?php endif ?>
+				<li class="car"></i><a href="index.php?c=goods&m=showCar">购物车
+				</a><span>|&nbsp;</span>
+					<div class="info"><p>还没有商品</p></div>
+				</li>
+
+				<!-- <li class="store"><i class="five"></i>我的小店
+					<div class="select">
+						<ul>
+							<li>&nbsp;后台管理</li>
+							<li>&nbsp;商家社区</li>
+							<li>&nbsp;商家培训</li>
+							<li>&nbsp;市场入驻</li>
+						</ul>
+					</div>
+				</li> -->
+			</ul>
+		</div>
+	</div> 

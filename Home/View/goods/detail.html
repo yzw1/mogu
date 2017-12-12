@@ -1,0 +1,94 @@
+<?php $this->header(); ?>
+	<!-- 商品部分 --> 
+	<div id="shop">
+		<div class="shop_content">
+			<div class="shop_left">
+				<img src="<?= imgUrl($img[0]['icon'])  ?>" alt="" width="400px" height="500px">
+				<ul>
+					<?php foreach ($img as $k => $v): ?>
+						
+					<li>
+						<img src="<?= imgUrl($v['icon']) ?>" alt="" width="90px" height="100px">
+					</li>
+					<?php endforeach ?>
+
+				</ul>
+			</div>
+			<div class="shop_right">
+				<form action="index.php">
+				<div class="shop_desc">
+					<span class="shop_goods_title">品牌:<?= $goods['name']?></span>
+				</div>
+				<div class="shop_desc">
+					<span class="shop_goods_title">描述:<?= $goods['desc']?></span>
+				</div>
+				<div class="shop_pric">
+					<span class="shop_goods_pric">价格:￥</span>
+					<span class="shop_goods_pric"><?= $goods['price']?></span>
+				</div>
+				<div class="shop_pric1">
+					<span class="shop_goods_pric">数量:</span>
+					<!-- <span class="shop_goods_pric"></span> -->
+					<div class="shop_pric2">
+						<em title="减少数量" id="count_add" value='jian' class="br" onclick="jian()">-</em>
+					<input type="text" name="count" id='mynum' style="width: 32px;height: 18px;" value='1' > 
+					<em	title="增加数量" id="count_sub" value='jia' class="bl" onclick="jia()">+</em>
+					</div>
+					<div class="stock">
+						( 库存 <span id="stock"><?= $goods['stock'] ?></span> 件 )
+					</div>
+					
+				</div>
+			
+				<div class="shop_action">
+				<!-- 改动的地方 -->
+						<input type="hidden" name="c" value="order">
+						<input type="hidden" name="m" value="shopcar">
+						<input type="hidden" name="id" value="<?= $goods['id']?>">
+					<!-- <a href="" class="shop_action_buy buy_btn">立刻购买</a> -->
+					<input type="submit" value="加入购物车" class="shop_action_add add_btn">
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<?php $this->footer();?>
+<script>
+	// 购买数量的表单id名
+	// 通过id名 获取表单
+    var mynum = document.getElementById('mynum');
+
+    // 通过id名, 获取库存
+    var stock = document.getElementById('stock');
+
+    // 购买数量-减
+    function jian(){
+        if(mynum.value > 0){
+            mynum.value = mynum.value - 1;
+        }
+
+        if(mynum.value < 1){
+            mynum.value = 1;
+        }
+    }
+
+    // 购买数量-加
+    function jia(){
+    	// js获取任意标签的值 都是字符串类型
+    	// 在js中, 字符串与数字相加, 结果成为拼接效果
+    	// 在js中, 数字与数字相加, 结果成为 和
+    	// 
+    	// parseInt() 强制转换为整型
+
+    	// alert(stock);
+    	// 获取普通标签的内容  变量名.innerHTML
+    	// alert(stock.innerHTML);
+
+        if( parseInt(mynum.value) >= parseInt(stock.innerHTML) ){
+        	mynum.value = stock.innerHTML;
+        }else{
+        	mynum.value = parseInt(mynum.value) + 1;
+        }
+    }
+</script>

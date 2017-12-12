@@ -1,0 +1,42 @@
+<?php $this->header(); ?>
+<div id="section6">
+		
+		<!-- list shop -->
+		
+		<div class="section_show">
+			<div class="size">
+			<h2 style="font-size: 30px;">商品展示</h2>
+			</div>
+			<div class="section_show_list">
+				<ul>
+				<?php foreach ($data as $k => $v): ?>
+					
+					<li> 
+						<!-- <div class="total" > -->
+						<a href="index.php?c=goods&m=detail&id=<?=$v['id']?>">
+						<div class="img">
+							<img src="<?= imgUrl($v['icon'])?>" alt="">
+						</div>
+						<div class="desc">
+							<p style="height: 15px;">名称:<?= $v['name'] ?></p>
+							<p style="height: 15px;">描述:<?= $v['desc'] ?></p>
+							<p style="height: 15px;">￥<?= $v['price'] ?></p>
+							<!-- <p style="height: 30px;">已售<?= $v['sold'] ?>件</p> -->
+						</div>
+						<div class="hidden">
+								<a href="index.php?c=goods&m=detail&id=<?=$v['id']?>">查看详情</a>
+						</div>
+						</a>
+						<!-- </div> -->
+					</li>	
+				<?php endforeach ?>
+
+				</ul>
+			</div>
+			<!-- <div class="section_show_page">
+				<?= $page->show('goods') ?>
+			</div> -->
+		</div>
+</div>
+
+<?php $this->footer(); ?>

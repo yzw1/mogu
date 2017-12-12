@@ -1,0 +1,14 @@
+#main .buy_wrap{margin:0 auto;background: #F8F8F8;}
+#main .buy_wrap .buy_title{height:150px; background: #19acca;}
+#main .buy_wrap .buy_title2{height:150px; background: #f16272;}
+#main .buy_wrap .buy_title .content{width:400px; text-align:center; margin:0 auto; font:22px/150px 微软雅黑; color:white; background: url('ok.png') no-repeat 0px 40px; padding-left: 90px;}
+#main .buy_wrap .buy_title2 .content2{width:400px; text-align:center; margin:0 auto; font:22px/150px 微软雅黑; color:white; background: url('img/no.png') no-repeat 0px 40px; padding-left: 90px;}
+#main .buy_wrap .buy_detail .content{width:550px; margin:0 auto;}
+#main .buy_wrap .buy_detail .content p{color:#999; font-size:12px; padding:0 0 15px;}
+#main .buy_wrap .buy_detail .content input{border: 0;width: 200px;height: 70px;background-color: red;font-size: 26px;font-weight: bold;color: white;}
+#main .buy_wrap .buy_detail .content input:hover{cursor: pointer}
+#main .buy_wrap .buy_detail .content p:first-child{padding:30px 0 20px; font:20px 黑体; color:#747474;}
+#main .buy_wrap .QRc{height:250px; background: white;}
+#main .buy_wrap .QRc .item{width:300px; background:url('../images/QRc.jpg') no-repeat 0 70px; background-size:100px; margin:0 auto; padding:100px 130px;}
+#main .buy_wrap .buy_detail .content .detail{height:35px; line-height: 35px; border-radius: 5px; font-size:16px; color:#fff; cursor:pointer; display: inline-block; padding:0 18px; background:#f16272; margin:0 18px;}
+#main .buy_wrap .buy_detail .content .index{font:16px 微软雅黑; text-decoration:underline; color:#f16272;}

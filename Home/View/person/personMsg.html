@@ -1,0 +1,40 @@
+<?php $this->css(); ?>
+<div id="section4">
+		<div class="section_middle">
+	<!-- <?= var_dump($data);?> -->
+		
+			<form action="index.php?c=person&m=doPersonMsg" method="post" enctype="multipart/form-data">
+				<table>
+					<tr>
+						<th>头像：</th>
+						<th><img src="<?= empty($data['icon'])?'../Public/default.gif':imgUrl($data['icon'])?>" alt="" style="border-radius: 100%;width: 110px;height: 110px;"><th>
+					 	
+					</tr>
+
+					<tr>
+						<th>用户名：</th>
+						<th><input class="input" name="nickname" type="text"></th>
+					 	
+					</tr>
+					<tr>
+						<th>修改头像:</th>
+						<td><input class="icon" type="file" name="icon"></td>
+					</tr>
+					<tr>
+						<th>性别:</th>
+						<td><input type="radio" checked name="sex" value="1" >男
+						    &nbsp;<input type="radio" name="sex" value="2" checked>女</td>
+					</tr>
+					<tr>
+						<th>地址:</th>
+						<th><input class="input" name="address" type="text"></th>
+					</tr>
+					<tr>
+						<th></th>
+						<th><input class="submit" type="submit" value="提交"></th>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+<?php $this->css_end(); ?>
